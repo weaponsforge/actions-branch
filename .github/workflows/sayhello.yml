@@ -1,0 +1,27 @@
+name: Lint Files
+
+# This workflow lints the client and server directories
+# And will trigger on push *any* branch except master and dev
+on:
+  push:
+    branches:
+      - master
+      - dev
+
+jobs:
+  hello-master:
+    name: Say Hello
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v3
+
+      - name: Use NodeJS v16.14.2
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.14.2
+
+      - name: Run script
+        run: |
+          cd src
+          npm start
