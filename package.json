@@ -1,0 +1,22 @@
+{
+  "name": "actions-branch",
+  "version": "1.0.0",
+  "description": "Testing GitHub Actions actions/checkout@v3 on specific branches.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/main"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/weaponsforge/actions-branch.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/weaponsforge/actions-branch/issues"
+  },
+  "homepage": "https://github.com/weaponsforge/actions-branch#readme",
+  "dependencies": {
+    "dotenv": "^16.3.1"
+  }
+}
