@@ -10,7 +10,30 @@ on:
 
 jobs:
   hello-master:
-    name: Say Hello
+    name: Say Hello from Master Branch
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v3
+
+      - name: Use NodeJS v16.14.2
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.14.2
+
+      - name: Install dependencies
+        run: |
+          cd src
+          npm install
+
+      - name: Run script
+        run: |
+          cd src
+          npm start
+
+jobs:
+  hello-dev:
+    name: Say Hello from Dev Branch
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the repository
